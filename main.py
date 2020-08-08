@@ -4,11 +4,9 @@
 import requests
 
 if __name__ == '__main__':
-	url = 'https://www.google.com.co'
+	url = 'http://httpbin.org/get'
 	response = requests.get(url)
 
 	if response.status_code == 200:
 		content = response.content
-		file = open('google.html', 'wb')
-		file.write(content)
-		file.close()
+		print(content)
